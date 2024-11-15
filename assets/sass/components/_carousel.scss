@@ -1,0 +1,21 @@
+@use '../abstracts/index' as *;
+
+.owl-item {
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+
+    & img {
+        height: auto;
+        object-fit: cover;
+    }
+
+    //Screen larger than 992px
+    @include breakpoint(tablet-landscape) {
+        width: 40rem !important;
+    }
+}
+
+.item {
+    width: 100%;
+}

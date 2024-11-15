@@ -1,0 +1,18 @@
+@use '../abstracts/index' as *;
+
+.card {
+    @include prefix(border-radius, $radius-lg, moz webkit);
+    overflow: hidden;
+
+    &--sm {
+        padding: $space-8x;
+    }
+
+    &-sm__description {
+        padding-block: $space-5x
+    }
+
+    &-sm__description {
+        padding-block: $space-4x $space-6x;
+    }
+}

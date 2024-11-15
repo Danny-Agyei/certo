@@ -1,0 +1,52 @@
+@use '../abstracts/index' as *;
+
+.btn {
+    align-items: center;
+    display: inline-flex;
+    font-size: var(--fs-btn);
+    font-weight: $fw-800;
+    justify-content: center;
+    padding: $space-4x $space-5x;
+    @include prefix(border-radius, $radius-pill, webkit moz);
+    @include prefix(transition, all .25s ease, webkit moz);
+    width: max-content;
+
+    &-icon {
+        @include prefix(transition, all .25s ease, webkit moz);
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0.8rem 0.5rem rgba(0, 0, 0, 0.8);
+
+
+        .btn-icon {
+            transform: translateX(0.5rem);
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 0.5rem rgba(0, 0, 0, 0.5);
+    }
+
+    &--primary {
+        background-color: $color-bg-primary;
+        color: $color-text-primary;
+    }
+
+    &--secondary {
+        background-color: $color-bg-secondary;
+        color: $color-text-light;
+    }
+
+    &--outline {
+        background-color: $color-bg-light;
+        color: $color-text-primary;
+        border: 2px solid $color-border-primary;
+    }
+
+    &--with-icon {
+        gap: $space-2x;
+    }
+}

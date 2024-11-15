@@ -15,51 +15,78 @@
         rel="stylesheet">
 
     <!-- Owl-carousel stylesheet  -->
-    <link rel="stylesheet" href="/assets/css/owl.theme.default.css">
-    <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.css">
 
     <!-- Custom stylesheet  -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Preloaders  -->
+    <link rel="preload" href="./assets//images/hero-banner.png" as="img">
 </head>
 
 <body>
-    <header class="header js-header">
-        <div class="header__container l-flex l-flex-row u-align-center l-container-lg">
-            <a href="#" class="header__logo">
-                <img src="./assets/images/logo.svg.svg" alt="Certo home" class="header__logo-img" width="110"
+    <header class="header">
+        <div class="header__menu js-navbar-menu">
+            <a href="#" class="header__logo header__logo-mobile js-menu-toggler">
+                <img src="./assets/images/logo.svg.svg" alt="Certo home" class="header__logo-img" width="100"
                     height="50" />
             </a>
-            <div class="header__menu js-navbar-menu">
-                <a href="#" class="header__logo header__logo-mobile js-menu-toggler">
-                    <img src="./assets/images/logo.svg.svg" alt="Certo home" class="header__logo-img" width="100"
+            <nav class="header__menu-navbar">
+                <ul class="header__menu-list l-flex l-flex-col">
+                    <li>
+                        <a href="#" class="header__link js-menu-toggler">iPhone</a>
+                    </li>
+                    <li>
+                        <a href="#" class="header__link js-menu-toggler">Android</a>
+                    </li>
+                    <li>
+                        <a href="#" class="header__link js-menu-toggler">Help</a>
+                    </li>
+                    <li>
+                        <a href="#" class="header__link js-menu-toggler l-flex l-flex-row u-align-center">
+                            Company <ion-icon name="chevron-down-outline" class="header__icon"
+                                aria-hidden="true"><ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__wrapper js-header">
+            <div class="header__container l-flex l-flex-row u-align-center l-container-lg u-space-between">
+                <a href="#" class="header__logo">
+                    <img src="./assets/images/logo.svg.svg" alt="Certo home" class="header__logo-img" width="110"
                         height="50" />
                 </a>
-                <nav class="header__menu-navbar">
-                    <ul class="header__menu-list l-flex l-flex-col">
-                        <li>
-                            <a href="#" class="header__menu-link js-menu-toggler">iPhone</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__menu-link js-menu-toggler">Android</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__menu-link js-menu-toggler">Help</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header__menu-link js-menu-toggler l-flex l-flex-row u-align-center">
-                                Company <ion-icon name="chevron-down-outline" class="header__icon"
-                                    aria-hidden="true"><ion-icon>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="header__right l-flex-row u-align-center">
+                    <nav class="header__navbar">
+                        <ul class="header__navbar-list l-flex l-flex-row u-align-center">
+                            <li>
+                                <a href="#" class="header__link">iPhone</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header__link">Android</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header__link">Help</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header__link l-flex l-flex-row u-align-center">
+                                    Company <ion-icon name="chevron-down-outline" class="header__icon"
+                                        aria-hidden="true"><ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="btn btn--secondary header__btn">Sign in</a>
+                    <button class="header__toggle js-menu-toggler js-hamburger">
+                        <span class="header__toggle-bar"></span>
+                        <span class="header__toggle-bar"></span>
+                        <span class="header__toggle-bar"></span>
+                    </button>
+                </div>
             </div>
-            <a href="#" class="btn btn--secondary header__btn">Sign in</a>
-            <button class="header__toggle js-menu-toggler js-hamburger">
-                <span class="header__toggle-bar"></span>
-                <span class="header__toggle-bar"></span>
-                <span class="header__toggle-bar"></span>
-            </button>
         </div>
     </header>
     <main>

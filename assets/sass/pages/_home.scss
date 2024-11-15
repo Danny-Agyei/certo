@@ -1,0 +1,409 @@
+@use '../abstracts/index' as *;
+@use '../base/index' as *;
+@use '../components/index' as *;
+@use '../layout/index' as *;
+
+
+// Hero Section 
+.hero {
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        background-image: url('../images/hero-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 75%;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -2;
+    }
+
+    &__inner {
+        gap: $space-16x;
+        grid-template-columns: 1fr;
+        padding-block-end: 0;
+    }
+
+    &__headline {
+        font-size: var(--fs-display);
+        max-width: 60rem;
+    }
+
+    &__description {
+        margin: $space-6x auto $space-8x;
+        max-width: 600px;
+    }
+
+    &__btn-group {
+        gap: $space-6x;
+    }
+
+    &__banner {
+        background-image: url("../images/hero-banner.png");
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1.5rem solid $color-border-secondary;
+        border-bottom: 0;
+        border-right: 0;
+        padding: $space-10x $space-10x $space-16x;
+        transform: translateX(4%);
+        width: 100%;
+
+        &-wrapper {
+            overflow: hidden;
+        }
+
+        &-img {
+            max-width: 30rem;
+            width: 100%;
+        }
+    }
+
+    // Screen larger than 992px 
+    @include breakpoint(tablet-landscape) {
+        &::before {
+            background-size: auto;
+            background-position: -50% 1%;
+        }
+
+        &__inner {
+            height: 68rem;
+            grid-template-columns: 1fr 0.9fr;
+            gap: $space-1x;
+            padding-block-end: $space-25x;
+            position: relative;
+        }
+
+        &__container {
+            width: 100%;
+        }
+
+        &__content {
+            text-align: left;
+            max-width: 48rem;
+            margin-inline-start: auto;
+        }
+
+        &__description {
+            margin: $space-10x 0;
+        }
+
+        &__btn-group {
+            align-items: flex-start;
+        }
+
+        &__banner {
+            background-position: center left;
+            background-size: auto;
+            padding: 2rem;
+            bottom: 0;
+            height: 92%;
+            position: absolute;
+            z-index: -1;
+
+            &-wrapper {
+                height: 100%;
+            }
+
+            &-img {
+                max-width: 25rem;
+            }
+        }
+
+    }
+
+    // Screen larger than 1175px 
+    @include breakpoint(desktop) {
+        &__content {
+            max-width: 55rem;
+        }
+
+        &::before {
+            background-size: cover;
+            background-position: -45rem;
+        }
+    }
+}
+
+// Testimonials Section 
+.testimonials {
+    background-image: $color-bg-gradient-primary;
+
+    &__carousel {
+        padding-block: $space-14x ;
+    }
+
+    &__headline {
+        max-width: 58rem;
+    }
+
+    &__card {
+        background-color: $color-bg-light;
+        min-height: 36.363rem;
+        max-width: 40rem;
+        margin-inline: $space-5x;
+    }
+
+    &__rating {
+        color: $color-text-secondary;
+    }
+
+    &__list {
+        margin-block-start: $space-8x;
+        gap: $space-4x;
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__img {
+        width: 12rem;
+    }
+
+    // Screen larger than 992px 
+    @include breakpoint(tablet-landscape) {
+        &__featured {
+            gap: $space-10x;
+
+        }
+
+        &__subhead {
+            text-align: left;
+        }
+
+        &__list {
+            margin-block-start: 0;
+            gap: $space-6x;
+        }
+
+    }
+}
+
+//Product Section 
+.product {
+    &__description {
+        margin-block: $space-6x $space-8x;
+    }
+
+    &__btn-group {
+        gap: $space-6x;
+    }
+
+    &__banner {
+        margin-block-start: $space-16x;
+        position: relative;
+        width: 100%;
+        max-width: 70rem;
+        margin-inline: auto;
+
+        &::before {
+            background: $color-bg-gradient-primary;
+            content: "";
+            height: 103%;
+            left: 0.8rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: calc(100% - 0.5rem);
+            z-index: -1;
+        }
+
+        &-img {
+            width: calc(100% - 1.5rem);
+        }
+    }
+
+    // Screen larger than 992px 
+    @include breakpoint(tablet-landscape) {
+        &__inner {
+            gap: $space-10x;
+        }
+
+        &__banner {
+            margin-block-start: 0;
+            width: 50%;
+        }
+    }
+
+    // Screen larger than 1175px 
+    @include breakpoint(desktop) {
+        &__inner {
+            gap: $space-35x;
+        }
+    }
+}
+
+// Services Section 
+.services {
+    background-image: $color-bg-gradient-light;
+
+    &__wrapper {
+        background-color: $color-bg-light;
+        box-shadow: $shadow-lg;
+        margin-block-start: $space-12x;
+        padding: $space-10x;
+    }
+
+    &__list {
+        gap: $space-3x;
+    }
+
+    &__item {
+        cursor: default;
+        gap: $space-6x;
+        text-align: center;
+        padding: $space-6x;
+        @include prefix(transition, background-color .25s ease-in-out, webkit moz);
+
+        &:hover {
+            background-color: $color-bg-primary;
+        }
+
+    }
+
+    &__title {
+        font-size: var(--fs-title);
+    }
+
+    &__btn-group {
+        gap: $space-6x;
+        margin-block-start: $space-8x;
+    }
+
+    // Screen larger than 992px 
+    @include breakpoint(tablet-landscape) {
+        &__wrapper {
+            padding: $space-14x $space-10x;
+        }
+
+        &__headline {
+            max-width: 68rem;
+            margin-inline: auto;
+        }
+
+        &__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__item {
+            padding: 2rem;
+        }
+
+        &__btn-group {
+            margin-block-start: $space-10x;
+        }
+    }
+}
+
+// About Section 
+.about {
+    &__read {
+        background: $color-bg-gradient-primary;
+        max-width: 40rem;
+    }
+
+    &__help {
+        margin-block-start: $space-10x;
+        max-width: 30rem;
+    }
+
+    &__title {
+        font-size: var(--fs-subhead);
+    }
+
+    @include breakpoint(tablet-portrait) {
+
+        &__inner {
+            gap: $space-12x;
+        }
+
+        &__read,
+        &__help {
+            margin-block-start: 0;
+            max-width: 50%;
+        }
+    }
+
+    // Screen larger than 992px 
+    @include breakpoint(tablet-landscape) {
+        &__help-description {
+            max-width: 25rem;
+        }
+
+        &__inner {
+            gap: $space-16x;
+        }
+    }
+}
+
+// Find-Out Section
+.find-out {
+    background: $color-bg-gradient-secondary;
+    color: $color-text-light;
+
+    &__inner {
+        gap: $space-10x;
+    }
+
+    &__btn-group {
+        gap: $space-6x;
+    }
+}
+
+// Blog | Insight Section 
+.blog {
+    background-color: $color-bg-grey;
+
+    &__list {
+        gap: $space-8x;
+        margin-block: $space-12x;
+    }
+
+    &__item {
+        background-color: $color-bg-light;
+        display: block;
+        @include prefix(border-radius, $radius-lg, moz webkit);
+        max-width: 45rem;
+        min-height: 48rem;
+        padding: 0;
+        position: relative;
+        @include prefix(transition, all .35s ease, webkit moz);
+
+        &:hover {
+            box-shadow: -0.1rem 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+            transform: translateY(-0.1rem) scale(1.01);
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        padding: $space-8x;
+    }
+
+    &__title {
+        margin-block-end: $space-8x;
+    }
+
+    &__caption {
+        background-color: $color-bg-light;
+        @include prefix(border-radius, $radius-pill, moz webkit);
+        font-weight: $fw-800;
+        font-size: var(--fs-body);
+        left: $space-5x;
+        padding: $space-3x $space-5x;
+        position: absolute;
+        top: $space-5x;
+    }
+}

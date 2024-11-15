@@ -1,0 +1,30 @@
+@use 'sass:map';
+
+
+@mixin prefix($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: $value
+    }
+
+    #{$property}:$value;
+}
+
+// Breakpoints based on device types and screen widths
+$breakpoints: (
+    'mobile': 37.5em,
+    // Mobile (up to 600px)
+    'tablet-portrait': 48em,
+    // Tablet portrait (up to 768px)
+    'tablet-landscape': 62em,
+    // Tablet landscape (up to 992px)
+    'desktop': 73em // Desktop (up to 1170px)
+);
+
+// Mixin to apply styles based on the selected breakpoint
+@mixin breakpoint($device) {
+    $min-width: map.get($breakpoints, $device);
+
+    @media only screen and (min-width: $min-width) {
+        @content;
+    }
+}

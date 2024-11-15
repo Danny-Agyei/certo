@@ -1,0 +1,71 @@
+@use '../abstracts/index' as *;
+
+.l-container {
+    padding-inline: $space-5x;
+
+    &-lg,
+    &-md {
+        @extend .l-container;
+    }
+
+    // Screen larger than 600px;
+    @include breakpoint(mobile) {
+        margin-inline: auto;
+        max-width: 54rem;
+
+        &-lg {
+            max-width: 56rem;
+            margin-inline: auto;
+        }
+    }
+
+    // Screen larger than 768px;
+    @include breakpoint(tablet-portrait) {
+        max-width: 64rem;
+
+        &-md {
+            max-width: 70rem;
+        }
+
+        &-lg {
+            max-width: 72rem;
+        }
+    }
+
+    // Screen larger than 992px;
+    @include breakpoint(tablet-landscape) {
+        padding-inline: 0;
+        max-width: 82rem;
+
+        &-md {
+            max-width: 90rem;
+        }
+
+        &-lg {
+            max-width: 90rem;
+        }
+    }
+
+    // Screen larger than 1170px;
+    @include breakpoint(desktop) {
+        max-width: 84rem;
+
+        &-lg {
+            max-width: 115rem;
+        }
+
+        &-md {
+            max-width: 101rem;
+            margin-inline: auto;
+        }
+    }
+}
+
+.l-inner {
+    padding-block: $space-20x;
+
+    // Screen larger than 992px;
+    @include breakpoint(tablet-landscape) {
+        padding-block: $space-25x;
+    }
+}

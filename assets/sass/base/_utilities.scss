@@ -1,0 +1,38 @@
+@use '../abstracts/index' as *;
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-space-between {
+    justify-content: space-between;
+}
+
+.u-align-center {
+    align-items: center;
+}
+
+.u-pull-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.u-headline-lg {
+    font-size: var(--fs-headline-lg);
+}
+
+.u-headline-md {
+    font-size: var(--fs-headline-md);
+}
+
+.u-headline-sm {
+    font-size: var(--fs-headline-sm);
+}
+
+.u-subhead {
+    font-size: var(--fs-subhead);
+}
+
+.u-section-text {
+    font-size: var(--fs-body-lg);
+}

@@ -1,0 +1,134 @@
+@use "./mixin" as *;
+
+// Space 
+$space-1x: 0.4rem;
+$space-2x: 0.8rem;
+$space-3x: 1.2rem;
+$space-4x: 1.6rem;
+$space-5x: 2.0rem;
+$space-6x: 2.4rem;
+$space-7x: 2.8rem;
+$space-8x: 3.2rem;
+$space-9x: 3.6rem;
+$space-10x: 4.0rem;
+$space-11x: 4.4rem;
+$space-12x: 4.8rem;
+$space-13x: 5.2rem;
+$space-14x: 5.6rem;
+$space-15x: 6.0rem;
+$space-16x: 6.4rem;
+$space-17x: 6.8rem;
+$space-18x: 7.2rem;
+$space-19x: 7.6rem;
+$space-20x: 8.0rem;
+$space-21x: 8.4rem;
+$space-22x: 8.8rem;
+$space-23x: 9.2rem;
+$space-24x: 9.6rem;
+$space-25x: 10.0rem;
+$space-26x: 10.4rem;
+$space-27x: 10.8rem;
+$space-28x: 11.2rem;
+$space-29x: 11.6rem;
+$space-30x: 12.0rem;
+$space-31x: 12.4rem;
+$space-32x: 12.8rem;
+$space-33x: 13.2rem;
+$space-34x: 13.6rem;
+$space-35x: 14.0rem;
+
+
+
+//Colors
+
+$color-text-primary: #02033B;
+$color-text-secondary: #FFC247;
+$color-text-light: #FFFFFF;
+$color-text-dark: #000000;
+
+$color-bg-primary: #FFC247;
+$color-bg-secondary: #4B48E5;
+$color-bg-grey: #F3F8FF;
+$color-bg-light: #FFFFFF;
+$color-bg-dark: #02033B;
+$color-bg-gradient-light: radial-gradient(50% 50% at 50.01% 50.01%, #FFFFFF 0%, #E7EFFA 100%);
+$color-bg-gradient-primary: linear-gradient(180deg, #F7C95F 0%, #FDB235 100%);
+$color-bg-gradient-secondary: linear-gradient(180deg, #2925CC 0%, #4B48E5 100%);
+$color-bg-gradient-grey: linear-gradient(180deg, #F3F8FF 0%, #E7EFFA 100%);
+
+$color-border-primary: #02033B;
+$color-border-secondary: #2925CC;
+
+//Typography
+$ff-primary: 'inter', sans-serif;
+
+$fs-base: 0.625rem;
+$fs-small: 1.2rem;
+$fs-body: 1.6rem;
+$fs-body-lg: 2.0rem;
+$fs-nav-link: 1.6rem;
+$fs-title: 1.9rem;
+$fs-subhead: 2.2rem;
+$fs-headline-sm: 2.4rem;
+$fs-headline-md: 2.6rem;
+$fs-headline-lg: 3.2rem;
+$fs-display: 4.8rem;
+$fs-btn: 1.6rem;
+
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$fw-800: 800;
+
+//Radius
+$radius-pill: 99rem;
+$radius-lg: 4.8rem;
+$radius-md: 4.2rem;
+$radius-sm: 1rem;
+$radius-xs: 0.5rem;
+
+
+// Box Shadow 
+$shadow-lg: 12px 12px 20px rgba(0, 0, 0, 0.1);
+
+:root {
+    --fs-base: 0.625rem;
+    --fs-small: 1.2rem;
+    --fs-body: 1.6rem;
+    --fs-body-lg: 2.0rem;
+    --fs-nav-link: 1.6rem;
+    --fs-title: 1.9rem;
+    --fs-subhead: 2.2rem;
+    --fs-headline-sm: 2.6rem;
+    --fs-headline-md: 2.6rem;
+    --fs-headline-lg: 3.2rem;
+    --fs-display: 4.8rem;
+    --fs-btn: 1.6rem;
+}
+
+//Screen larger than 768px
+@include breakpoint(tablet-portrait) {
+    :root {
+        --fs-title: 1.9rem;
+        --fs-subhead: 2.3rem;
+        --fs-headline-sm: 2.8rem;
+        --fs-headline-md: 3.6rem;
+        --fs-headline-lg: 5rem;
+        --fs-display: 5rem;
+        --fs-nav-link: 1.9rem;
+    }
+}
+
+//Screen larger than 992px
+@include breakpoint(tablet-landscape) {
+    :root {
+        --fs-btn: 1.9rem;
+    }
+}
+
+//Screen larger than 1170px
+@include breakpoint(desktop) {
+    :root {
+        --fs-display: 5.7rem;
+    }
+}
