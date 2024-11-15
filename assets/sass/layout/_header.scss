@@ -33,7 +33,7 @@
     }
 
     &__btn {
-        font-size: 1.5rem;
+        font-size: 1.6rem !important;
         margin-inline-start: auto;
         padding: $space-3x $space-4x;
     }
@@ -123,6 +123,7 @@
         &__logo-img {
             width: 15rem;
         }
+
     }
 
     // Screen larger than 992px 
