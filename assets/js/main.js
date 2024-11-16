@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const headerMenu = document.querySelector(".js-navbar-menu");
   const headerMenuBtn = document.querySelector(".js-hamburger");
   const headerMenuTogglers = document.querySelectorAll(".js-menu-toggler");
+  const loader = document.querySelector(".js-loader");
+
+  // Remover loader when page finish loading
+  if (loader) {
+    loader.classList.remove("loader--active");
+  }
 
   // Header Animation Classes
   const HEADER_SLIDE_DOWN_CLASS = "header--slideDown";

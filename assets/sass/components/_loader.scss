@@ -1,0 +1,52 @@
+@use '../abstracts/index' as *;
+
+.loader {
+    align-items: center;
+    background-color: $color-bg-light;
+    display: none;
+    flex-direction: column;
+    gap: $space-4x;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    user-select: none;
+    width: 100vw;
+    z-index: 999;
+
+    &--active {
+        display: flex;
+    }
+
+    &__img {
+        width: 18rem;
+    }
+
+    &__wrapper {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 85px;
+    }
+
+    &__pulse {
+        border-radius: 50%;
+        background-color: $color-bg-secondary;
+        height: 20px;
+        width: 20px;
+    }
+
+    &__pulse-1 {
+        @include prefix(animation, pulse .4s ease 0s infinite alternate, webkit o)
+    }
+
+    &__pulse-2 {
+        @include prefix(animation, pulse .4s ease .2s infinite alternate, webkit o);
+    }
+
+    &__pulse-3 {
+        @include prefix(animation, pulse .4s ease .4s infinite alternate, webkit o);
+    }
+
+}

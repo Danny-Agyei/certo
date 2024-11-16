@@ -9,6 +9,10 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+::selection {
+    background-color: $color-bg-primary;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 
