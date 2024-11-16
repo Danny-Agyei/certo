@@ -24,6 +24,8 @@
     }
 
     &__inner {
+        max-width: 180rem;
+        margin-inline: auto;
         gap: $space-16x;
         grid-template-columns: 1fr;
         padding-block-end: 0;
@@ -145,7 +147,7 @@
 
     &__card {
         background-color: $color-bg-light;
-        min-height: 36.363rem;
+        min-height: 38rem;
         max-width: 40rem;
         margin-inline: $space-5x;
     }
@@ -192,6 +194,7 @@
 .product {
     &__description {
         margin-block: $space-6x $space-8x;
+        overflow: hidden;
     }
 
     &__btn-group {
@@ -250,7 +253,7 @@
         background-color: $color-bg-light;
         box-shadow: $shadow-lg;
         margin-block-start: $space-12x;
-        padding: $space-10x;
+        padding: $space-6x;
     }
 
     &__list {

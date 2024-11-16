@@ -4,7 +4,7 @@
 .header {
     &__wrapper {
         background-color: $color-bg-grey;
-        padding: $space-4x;
+        padding-block: $space-4x;
         width: 100%;
         z-index: 4;
     }
@@ -33,9 +33,9 @@
     }
 
     &__btn {
-        font-size: 1.6rem !important;
+        --fs-btn: 1.4rem;
         margin-inline-start: auto;
-        padding: $space-3x $space-4x;
+        padding: $space-3x $space-4x !important;
     }
 
     &__toggle {
@@ -43,7 +43,7 @@
         display: flex;
         flex-direction: column;
         margin-inline-start: $space-6x;
-        width: 30px;
+        width: 26px;
 
         &--on {
             .header__toggle-bar:nth-child(2) {
@@ -65,7 +65,7 @@
             @include prefix(border-radius, $radius-xs, moz webkit);
             height: 3px;
             width: 100%;
-            transform-origin: 26.5px center;
+            transform-origin: 24.6px center;
             @include prefix(transition, all .25s ease-in-out, webkit moz);
 
             &:not(:last-child) {
@@ -109,7 +109,7 @@
         }
 
         &-list {
-            gap: $space-4x
+            gap: $space-6x
         }
 
     }

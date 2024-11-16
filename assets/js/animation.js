@@ -6,25 +6,24 @@ const slideRight = document.querySelector(".js-slide-right");
 const slideLeft = document.querySelector(".js-slide-left");
 const heroBanner = document.querySelector(".js-hero-banner");
 
-// Hero Section
 ScrollReveal().reveal(slideUp1, {
   distance: "50%",
   easing: "ease",
-  delay: 400,
+  delay: 350,
   duration: 650,
 });
 
 ScrollReveal().reveal(slideUp2, {
   distance: "50%",
   easing: "ease",
-  delay: 500,
+  delay: 400,
   duration: 650,
 });
 
 ScrollReveal().reveal(slideUp3, {
   distance: "50%",
   easing: "ease",
-  delay: 600,
+  delay: 450,
   duration: 650,
 });
 
@@ -38,14 +37,15 @@ ScrollReveal().reveal(heroBanner, {
 ScrollReveal().reveal(slideRight, {
   distance: "30%",
   easing: "ease",
-  delay: 500,
+  delay: 350,
   duration: 800,
   origin: "right",
 });
+
 ScrollReveal().reveal(slideLeft, {
   distance: "30%",
   easing: "ease",
-  delay: 500,
+  delay: 350,
   duration: 800,
   origin: "left",
 });
