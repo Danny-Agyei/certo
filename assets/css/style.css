@@ -777,9 +777,12 @@ ion-icon {
   }
 }
 
+.product {
+  overflow: hidden;
+}
+
 .product__description {
   margin-block: 2.4rem 3.2rem;
-  overflow: hidden;
 }
 
 .product__btn-group {

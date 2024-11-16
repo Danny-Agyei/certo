@@ -192,9 +192,10 @@
 
 //Product Section 
 .product {
+    overflow: hidden;
+
     &__description {
         margin-block: $space-6x $space-8x;
-        overflow: hidden;
     }
 
     &__btn-group {
