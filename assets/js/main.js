@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
+  //
   const header = document.querySelector(".js-header");
   const headerMenu = document.querySelector(".js-navbar-menu");
   const headerMenuBtn = document.querySelector(".js-hamburger");
@@ -89,4 +90,4 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
-});
+};
